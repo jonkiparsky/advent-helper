@@ -1,6 +1,6 @@
 ;;; advent.el --- Advent of Code helpers
 
-;; Author: Keegan Carruthers-Smith
+;; Original Author: Keegan Carruthers-Smith
 
 ;;; Commentary:
 
@@ -10,7 +10,16 @@
 ;; Ensure you have logged in with advent-login.  Once logged in, just call the
 ;; function advent.
 ;;
-;; Demo at https://asciinema.org/a/ypGwNO8JyPpIEXz7CC7ZkaOFp
+
+;; issues
+;; 1) should take year/date rather than just date
+;; 2) should not attempt to retrieve a date which is out of bounds
+;;   (ie, if date is not in the range 12/1-12/25 it should prompt for a year/day)
+;; 3) should not make assumptions about where I want my advent code rooted
+;; 4) however, should assume that code is structured in directories by year, with
+;;    files named by day (with a user-settable prefix), and should use this structure
+;;    to determine what solution we're submitting (if I'm in ~/.../2015/2.py, surely
+;;    we know the date to submit!)
 
 ;;; Code:
 
